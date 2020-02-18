@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'CRUDApplication'`, () => {
+  it(`should have as title 'inventoryapp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('CRUDApplication');
+    expect(app.title).toEqual('inventoryapp');
   });
 
-  it('should render title', () => {
+  it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('CRUDApplication app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to inventoryapp!');
   });
 });
